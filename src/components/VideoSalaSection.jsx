@@ -10,9 +10,19 @@ export default function VideoSalaSection() {
     <section
       ref={sectionRef}
       className="relative overflow-hidden"
-      style={{ backgroundColor: '#111' }}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-20 md:py-28">
+      {/* Background image */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: 'url(/images/diurna-geral.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+      <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.75)' }} />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-20 md:py-28">
         {/* Text */}
         <div
           className="text-center mb-10 md:mb-14 transition-all duration-700"
@@ -23,7 +33,7 @@ export default function VideoSalaSection() {
         >
           <p
             className="text-sm font-semibold tracking-widest uppercase mb-4"
-            style={{ color: '#40916C', fontFamily: "'Inter', sans-serif" }}
+            style={{ color: '#52B788', fontFamily: "'Inter', sans-serif" }}
           >
             Conheça o edifício
           </p>
@@ -63,7 +73,7 @@ export default function VideoSalaSection() {
           <div
             className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none rounded-b-2xl"
             style={{
-              background: 'linear-gradient(transparent, rgba(17,17,17,0.6))',
+              background: 'linear-gradient(transparent, rgba(0,0,0,0.4))',
               opacity: showControls ? 0 : 1,
               transition: 'opacity 0.3s',
             }}

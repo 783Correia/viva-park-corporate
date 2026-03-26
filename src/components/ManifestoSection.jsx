@@ -17,9 +17,19 @@ export default function ManifestoSection() {
     <section
       ref={sectionRef}
       className="relative overflow-hidden"
-      style={{ backgroundColor: '#1A1A1A' }}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-20 md:py-28 lg:py-36">
+      {/* Background image */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: 'url(/images/aerea-topo.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+      <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.78)' }} />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-20 md:py-28 lg:py-36">
         {/* Label + headline */}
         <div
           className="text-center mb-6 md:mb-8 transition-all duration-700"
@@ -31,17 +41,17 @@ export default function ManifestoSection() {
           <div className="flex items-center justify-center gap-3 mb-5">
             <span
               className="block w-8 h-[3px] rounded-full"
-              style={{ background: '#40916C' }}
+              style={{ background: '#52B788' }}
             />
             <span
               className="text-sm font-semibold tracking-widest uppercase"
-              style={{ color: '#40916C', fontFamily: "'Inter', sans-serif" }}
+              style={{ color: '#52B788', fontFamily: "'Inter', sans-serif" }}
             >
               O bairro-parque
             </span>
             <span
               className="block w-8 h-[3px] rounded-full"
-              style={{ background: '#40916C' }}
+              style={{ background: '#52B788' }}
             />
           </div>
 
@@ -57,7 +67,7 @@ export default function ManifestoSection() {
         <p
           className="text-center max-w-3xl mx-auto text-base md:text-lg leading-relaxed mb-12 md:mb-16 transition-all duration-700 delay-150"
           style={{
-            color: '#999',
+            color: 'rgba(255,255,255,0.6)',
             fontFamily: "'Inter', sans-serif",
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
@@ -83,8 +93,10 @@ export default function ManifestoSection() {
               key={item.label}
               className="text-center p-5 rounded-xl transition-all duration-500"
               style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid rgba(255,255,255,0.08)',
+                background: 'rgba(255,255,255,0.08)',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+                border: '1px solid rgba(255,255,255,0.12)',
                 transitionDelay: `${300 + i * 100}ms`,
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
@@ -96,7 +108,7 @@ export default function ManifestoSection() {
               >
                 {item.value}
               </span>
-              <span className="text-xs md:text-sm" style={{ color: '#888' }}>
+              <span className="text-xs md:text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
                 {item.label}
               </span>
             </div>
@@ -128,11 +140,10 @@ export default function ManifestoSection() {
             poster="/images/aerea-topo.jpg"
           />
 
-          {/* Subtle gradient overlay at bottom */}
           <div
             className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none rounded-b-2xl"
             style={{
-              background: 'linear-gradient(transparent, rgba(26,26,26,0.6))',
+              background: 'linear-gradient(transparent, rgba(0,0,0,0.4))',
               opacity: showControls ? 0 : 1,
               transition: 'opacity 0.3s',
             }}
