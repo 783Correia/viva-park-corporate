@@ -138,7 +138,7 @@ export default function ArgumentoSection() {
         }
 
         .argumento__headline {
-          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-family: 'Playfair Display', Georgia, serif;
           font-weight: 600;
           font-size: clamp(1.75rem, 4vw, 2.75rem);
           line-height: 1.2;

@@ -130,7 +130,6 @@ export default function CondicoesSection() {
             style={{
               opacity: totalVisible ? 1 : 0,
               transform: totalVisible ? 'translateY(0) scale(1)' : 'translateY(20px) scale(0.98)',
-              animation: totalVisible ? 'borderGlow 3s ease-in-out infinite' : 'none',
             }}
           >
             {/* Green corner accent — top-left */}
@@ -156,50 +155,13 @@ export default function CondicoesSection() {
               Valor total
             </p>
 
-            <p className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold shimmer-green">
+            <p className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#2D6A4F]">
               R$ 963.033,38
             </p>
           </div>
         </div>
       </div>
 
-      {/* Inline keyframes for border-glow animation & shimmer */}
-      <style jsx>{`
-        @keyframes borderGlow {
-          0%,
-          100% {
-            box-shadow: 0 0 0 0 rgba(64, 145, 108, 0);
-          }
-          50% {
-            box-shadow: 0 0 30px -5px rgba(64, 145, 108, 0.2),
-              0 0 0 1px rgba(64, 145, 108, 0.15);
-          }
-        }
-
-        .shimmer-green {
-          background: linear-gradient(
-            90deg,
-            #1a1a1a 0%,
-            #40916c 40%,
-            #52b788 60%,
-            #1a1a1a 100%
-          );
-          background-size: 200% 100%;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          animation: shimmer 3s ease-in-out infinite;
-        }
-
-        @keyframes shimmer {
-          0% {
-            background-position: 100% 0;
-          }
-          100% {
-            background-position: -100% 0;
-          }
-        }
-      `}</style>
     </section>
   );
 }

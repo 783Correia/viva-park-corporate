@@ -27,8 +27,8 @@ export default function LocalizacaoSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <span className="block w-8 h-[2px] bg-[#0B6B4F]" />
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#0B6B4F]">
+          <span className="block w-8 h-[2px] bg-[#2D6A4F]" />
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#2D6A4F]">
             Localização
           </span>
         </div>
@@ -86,7 +86,7 @@ export default function LocalizacaoSection() {
             >
               {/* Location icon */}
               <svg
-                className="w-4 h-4 text-[#0B6B4F] flex-shrink-0"
+                className="w-4 h-4 text-[#2D6A4F] flex-shrink-0"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -107,7 +107,7 @@ export default function LocalizacaoSection() {
                 <span className="text-xs font-medium text-[#1A1A1A] block">
                   {item.nome}
                 </span>
-                <span className="text-[11px] text-[#0B6B4F] font-semibold">
+                <span className="text-[11px] text-[#2D6A4F] font-semibold">
                   {item.tempo}
                 </span>
               </div>
@@ -127,12 +127,12 @@ export default function LocalizacaoSection() {
               className="w-72 h-72 rounded-full opacity-20 blur-3xl"
               style={{
                 background:
-                  'radial-gradient(circle, #0B6B4F 0%, transparent 70%)',
+                  'radial-gradient(circle, #2D6A4F 0%, transparent 70%)',
               }}
             />
           </div>
           <p className="relative text-white font-serif text-xl md:text-2xl lg:text-3xl">
-            <span className="text-[#2AFFA0] font-semibold">
+            <span className="text-[#52B788] font-semibold">
               80 mil visitantes
             </span>{' '}
             por mês no ecossistema Viva&nbsp;Park

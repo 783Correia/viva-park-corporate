@@ -1,32 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import useParallax from '../hooks/useParallax';
 
 const WHATSAPP_URL =
   'https://wa.me/5547992762266?text=Olá Dieison! Vi a Sala 2313 no Viva Park Corporate e gostaria de conversar.';
 
-const pills = ['41,56m²', 'Vista Parque', 'Escritório', 'VP 2'];
+const pills = ['41,56m²', 'Vista Parque', '23º andar', 'VP 2'];
 
 export default function HeroSection() {
   const [visible, setVisible] = useState(false);
-  const [parallaxRef, parallaxOffset] = useParallax(0.35);
 
   useEffect(() => {
     const id = requestAnimationFrame(() => setVisible(true));
     return () => cancelAnimationFrame(id);
   }, []);
 
-  /* stagger helper — returns inline transition‑delay */
   const stagger = (step) => ({
     transitionDelay: `${300 + step * 180}ms`,
   });
 
   return (
-    <section
-      ref={parallaxRef}
-      className="hero"
-      style={{ '--parallax-y': `${parallaxOffset}px` }}
-    >
-      {/* ——— background with ken‑burns ——— */}
+    <section className="hero">
+      {/* background with ken-burns */}
       <div className="hero__bg" aria-hidden="true">
         <img
           src="/images/hero-bg.jpg"
@@ -36,20 +29,18 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* ——— gradient overlay ——— */}
+      {/* gradient overlay */}
       <div className="hero__overlay" aria-hidden="true" />
 
-      {/* ——— content ——— */}
+      {/* content */}
       <div className="hero__content">
-        {/* pill badge */}
         <span
           className={`hero__badge ${visible ? 'is-visible' : ''}`}
           style={stagger(0)}
         >
-          Viva Park Corporate · Última unidade aérea
+          Última unidade aérea disponível
         </span>
 
-        {/* main title */}
         <h1
           className={`hero__title ${visible ? 'is-visible' : ''}`}
           style={stagger(1)}
@@ -57,18 +48,16 @@ export default function HeroSection() {
           Sala 2313
         </h1>
 
-        {/* subtitle bar */}
         <div
           className={`hero__subtitle-bar ${visible ? 'is-visible' : ''}`}
           style={stagger(2)}
         >
           <span className="hero__subtitle-accent" />
           <p className="hero__subtitle-text">
-            Escritório corporativo · Viva Park Porto Belo
+            Viva Park Corporate · Porto Belo
           </p>
         </div>
 
-        {/* spec pills */}
         <ul
           className={`hero__pills ${visible ? 'is-visible' : ''}`}
           style={stagger(4)}
@@ -80,7 +69,6 @@ export default function HeroSection() {
           ))}
         </ul>
 
-        {/* CTA */}
         <a
           href={WHATSAPP_URL}
           target="_blank"
@@ -92,7 +80,7 @@ export default function HeroSection() {
         </a>
       </div>
 
-      {/* ——— scroll indicator ——— */}
+      {/* scroll indicator */}
       <div className="hero__scroll" aria-hidden="true">
         <svg
           className="hero__chevron"
@@ -109,11 +97,7 @@ export default function HeroSection() {
         </svg>
       </div>
 
-      {/* ——— scoped styles ——— */}
       <style>{`
-        /* ===== fonts (expected loaded globally) ===== */
-        /* Sora → pills / badge   DM Sans → body   Cormorant Garamond → title */
-
         .hero {
           position: relative;
           width: 100%;
@@ -126,13 +110,10 @@ export default function HeroSection() {
           color: #fff;
         }
 
-        /* ---- background ---- */
         .hero__bg {
           position: absolute;
-          inset: -60px;
+          inset: 0;
           z-index: 0;
-          transform: translateY(var(--parallax-y, 0));
-          will-change: transform;
         }
 
         .hero__bg-img {
@@ -144,23 +125,21 @@ export default function HeroSection() {
 
         @keyframes kenBurns {
           0%   { transform: scale(1)   translate(0, 0); }
-          100% { transform: scale(1.12) translate(-1.5%, -1%); }
+          100% { transform: scale(1.08) translate(-1%, -0.5%); }
         }
 
-        /* ---- overlay ---- */
         .hero__overlay {
           position: absolute;
           inset: 0;
           z-index: 1;
           background: linear-gradient(
             180deg,
-            rgba(0, 0, 0, 0.55) 0%,
-            rgba(0, 0, 0, 0.70) 60%,
-            rgba(0, 0, 0, 0.85) 100%
+            rgba(0, 0, 0, 0.45) 0%,
+            rgba(0, 0, 0, 0.60) 50%,
+            rgba(0, 0, 0, 0.80) 100%
           );
         }
 
-        /* ---- content ---- */
         .hero__content {
           position: relative;
           z-index: 2;
@@ -173,14 +152,13 @@ export default function HeroSection() {
           max-width: 760px;
         }
 
-        /* ---- shared entrance animation ---- */
         .hero__badge,
         .hero__title,
         .hero__subtitle-bar,
         .hero__pills,
         .hero__cta {
           opacity: 0;
-          transform: translateY(32px);
+          transform: translateY(28px);
           transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
                       transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -194,33 +172,30 @@ export default function HeroSection() {
           transform: translateY(0);
         }
 
-        /* ---- badge ---- */
         .hero__badge {
-          font-family: 'Sora', sans-serif;
-          font-size: 0.75rem;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.8rem;
           font-weight: 500;
-          letter-spacing: 0.08em;
+          letter-spacing: 0.06em;
           text-transform: uppercase;
-          background: rgba(255, 255, 255, 0.10);
-          backdrop-filter: blur(6px);
-          -webkit-backdrop-filter: blur(6px);
-          border: 1px solid rgba(255, 255, 255, 0.18);
+          background: rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: 1px solid rgba(255, 255, 255, 0.15);
           border-radius: 999px;
-          padding: 8px 22px;
-          color: #fff;
+          padding: 10px 24px;
+          color: rgba(255,255,255,0.9);
         }
 
-        /* ---- title ---- */
         .hero__title {
-          font-family: 'Cormorant Garamond', Georgia, serif;
-          font-weight: 600;
-          font-size: clamp(3rem, 8vw, 6.5rem);
-          line-height: 1.05;
+          font-family: 'Playfair Display', Georgia, serif;
+          font-weight: 700;
+          font-size: clamp(3.5rem, 9vw, 7rem);
+          line-height: 1;
           letter-spacing: -0.02em;
-          margin: 4px 0 0;
+          margin: 8px 0 0;
         }
 
-        /* ---- subtitle bar ---- */
         .hero__subtitle-bar {
           display: flex;
           align-items: center;
@@ -229,9 +204,9 @@ export default function HeroSection() {
 
         .hero__subtitle-accent {
           width: 36px;
-          height: 3px;
+          height: 2px;
           border-radius: 2px;
-          background: #2D6A4F;
+          background: #40916C;
           flex-shrink: 0;
         }
 
@@ -239,12 +214,11 @@ export default function HeroSection() {
           font-family: 'DM Sans', sans-serif;
           font-size: 1rem;
           font-weight: 400;
-          letter-spacing: 0.02em;
-          color: rgba(255, 255, 255, 0.85);
+          letter-spacing: 0.03em;
+          color: rgba(255, 255, 255, 0.75);
           margin: 0;
         }
 
-        /* ---- pills ---- */
         .hero__pills {
           display: flex;
           flex-wrap: wrap;
@@ -252,22 +226,20 @@ export default function HeroSection() {
           gap: 10px;
           list-style: none;
           padding: 0;
-          margin: 6px 0 0;
+          margin: 8px 0 0;
         }
 
         .hero__pill {
-          font-family: 'Sora', sans-serif;
-          font-size: 0.75rem;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.8rem;
           font-weight: 500;
-          letter-spacing: 0.04em;
-          padding: 7px 18px;
+          letter-spacing: 0.02em;
+          padding: 8px 18px;
           border-radius: 999px;
-          border: 1px solid rgba(255, 255, 255, 0.25);
-          color: rgba(255, 255, 255, 0.90);
-          background: rgba(255, 255, 255, 0.06);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: rgba(255, 255, 255, 0.85);
         }
 
-        /* ---- CTA ---- */
         .hero__cta {
           display: inline-flex;
           align-items: center;
@@ -285,9 +257,8 @@ export default function HeroSection() {
           text-decoration: none;
           margin-top: 8px;
           transition: background 0.3s ease, transform 0.3s ease,
-                      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                      translateY 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-          box-shadow: 0 4px 24px rgba(45, 106, 79, 0.35);
+                      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+          box-shadow: 0 4px 20px rgba(45, 106, 79, 0.3);
         }
 
         .hero__cta:hover {
@@ -295,30 +266,24 @@ export default function HeroSection() {
           transform: translateY(-2px);
         }
 
-        .hero__cta:active {
-          transform: translateY(0);
-        }
-
-        /* ---- scroll indicator ---- */
         .hero__scroll {
           position: absolute;
           bottom: 32px;
           left: 50%;
           transform: translateX(-50%);
           z-index: 2;
-          color: rgba(255, 255, 255, 0.50);
+          color: rgba(255, 255, 255, 0.40);
         }
 
         .hero__chevron {
-          animation: bounce 2s ease-in-out infinite;
+          animation: bounce 2.5s ease-in-out infinite;
         }
 
         @keyframes bounce {
           0%, 100% { transform: translateY(0); }
-          50%      { transform: translateY(8px); }
+          50%      { transform: translateY(6px); }
         }
 
-        /* ---- responsive ---- */
         @media (max-width: 640px) {
           .hero__content { gap: 16px; }
           .hero__cta { width: 100%; padding: 16px 0; }

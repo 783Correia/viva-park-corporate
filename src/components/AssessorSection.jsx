@@ -30,8 +30,8 @@ export default function AssessorSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <span className="block w-8 h-[2px] bg-[#0B6B4F]" />
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#0B6B4F]">
+          <span className="block w-8 h-[2px] bg-[#2D6A4F]" />
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#2D6A4F]">
             Seu assessor
           </span>
         </div>
@@ -46,8 +46,8 @@ export default function AssessorSection() {
           >
             <div className="relative">
               {/* Green corner accents */}
-              <div className="absolute -top-3 -left-3 w-16 h-16 border-t-[3px] border-l-[3px] border-[#0B6B4F] rounded-tl-2xl pointer-events-none" />
-              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b-[3px] border-r-[3px] border-[#0B6B4F] rounded-br-2xl pointer-events-none" />
+              <div className="absolute -top-3 -left-3 w-16 h-16 border-t-[3px] border-l-[3px] border-[#2D6A4F] rounded-tl-2xl pointer-events-none" />
+              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b-[3px] border-r-[3px] border-[#2D6A4F] rounded-br-2xl pointer-events-none" />
 
               {!imgError ? (
                 <img
@@ -57,7 +57,7 @@ export default function AssessorSection() {
                   onError={() => setImgError(true)}
                 />
               ) : (
-                <div className="w-64 h-80 md:w-72 md:h-96 rounded-2xl shadow-lg flex items-center justify-center bg-gradient-to-br from-[#0B6B4F] to-[#064C37]">
+                <div className="w-64 h-80 md:w-72 md:h-96 rounded-2xl shadow-lg flex items-center justify-center bg-gradient-to-br from-[#2D6A4F] to-[#064C37]">
                   <span className="text-5xl font-serif font-bold text-white/90">
                     DC
                   </span>
@@ -78,7 +78,7 @@ export default function AssessorSection() {
               Dieison Corazza
             </h3>
             <p
-              className={`text-[#0B6B4F] font-medium text-sm tracking-wide uppercase mb-6 transition-all duration-700 delay-[350ms] ${
+              className={`text-[#2D6A4F] font-medium text-sm tracking-wide uppercase mb-6 transition-all duration-700 delay-[350ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-6'
@@ -104,7 +104,7 @@ export default function AssessorSection() {
               {stats.map((stat, i) => (
                 <span
                   key={stat.label}
-                  className={`inline-block bg-[#0B6B4F]/10 text-[#0B6B4F] text-xs font-semibold tracking-wide px-4 py-2 rounded-full transition-all duration-500 ${
+                  className={`inline-block bg-[#2D6A4F]/10 text-[#2D6A4F] text-xs font-semibold tracking-wide px-4 py-2 rounded-full transition-all duration-500 ${
                     isVisible
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-4'
@@ -123,7 +123,7 @@ export default function AssessorSection() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className={`glow-pulse inline-flex items-center gap-3 bg-[#0B6B4F] hover:bg-[#095E44] text-white font-semibold text-sm md:text-base px-8 py-4 rounded-full shadow-lg transition-all duration-500 delay-700 ${
+              className={`inline-flex items-center gap-3 bg-[#2D6A4F] hover:bg-[#245a42] text-white font-semibold text-sm md:text-base px-8 py-4 rounded-full shadow-lg transition-all duration-500 delay-700 hover:-translate-y-0.5 ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-6'
