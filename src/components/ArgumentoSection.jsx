@@ -61,7 +61,7 @@ function ArgumentCard({ icon, title, description, index }) {
 }
 
 export default function ArgumentoSection() {
-  const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.15 });
+  const [sectionRef, isVisible] = useScrollReveal(0.15);
 
   return (
     <section

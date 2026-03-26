@@ -21,7 +21,7 @@ const ChevronRight = ({ size = 28 }) => (
    GaleriaSection
    ───────────────────────────────────────────── */
 export default function GaleriaSection() {
-  const sectionRef = useScrollReveal();
+  const [sectionRef] = useScrollReveal();
 
   const fotos = produto.galeria;
   const total = fotos.length;

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { produto } from '../data/produto';
 import useScrollReveal from '../hooks/useScrollReveal';
 
@@ -30,11 +30,8 @@ const conditions = [
 ];
 
 export default function CondicoesSection() {
-  const sectionRef = useRef(null);
-  const isVisible = useScrollReveal(sectionRef, { threshold: 0.1 });
-
-  const totalRef = useRef(null);
-  const totalVisible = useScrollReveal(totalRef, { threshold: 0.3 });
+  const [sectionRef, isVisible] = useScrollReveal(0.1);
+  const [totalRef, totalVisible] = useScrollReveal(0.3);
 
   return (
     <section

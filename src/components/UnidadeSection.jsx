@@ -17,7 +17,7 @@ const specs = [
    UnidadeSection
    ───────────────────────────────────────────── */
 export default function UnidadeSection() {
-  const sectionRef = useScrollReveal();
+  const [sectionRef] = useScrollReveal();
 
   return (
     <section

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import useScrollReveal from '../hooks/useScrollReveal';
 import useCountUp from '../hooks/useCountUp';
 
@@ -19,7 +19,7 @@ const pills = [
 ];
 
 function StatCard({ end, suffix, label, delay, isVisible }) {
-  const count = useCountUp(end, 2000, isVisible);
+  const count = useCountUp(end, isVisible, 2000);
 
   return (
     <div
@@ -46,14 +46,9 @@ function StatCard({ end, suffix, label, delay, isVisible }) {
 }
 
 export default function EcossistemaSection() {
-  const sectionRef = useRef(null);
-  const isVisible = useScrollReveal(sectionRef, { threshold: 0.15 });
-
-  const pillsRef = useRef(null);
-  const pillsVisible = useScrollReveal(pillsRef, { threshold: 0.2 });
-
-  const lineRef = useRef(null);
-  const lineVisible = useScrollReveal(lineRef, { threshold: 0.5 });
+  const [sectionRef, isVisible] = useScrollReveal(0.15);
+  const [pillsRef, pillsVisible] = useScrollReveal(0.2);
+  const [lineRef, lineVisible] = useScrollReveal(0.5);
 
   return (
     <section

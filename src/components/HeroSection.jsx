@@ -8,7 +8,7 @@ const pills = ['41,56m²', 'Vista Parque', 'Escritório', 'VP 2'];
 
 export default function HeroSection() {
   const [visible, setVisible] = useState(false);
-  const parallaxOffset = useParallax(0.35);
+  const [parallaxRef, parallaxOffset] = useParallax(0.35);
 
   useEffect(() => {
     const id = requestAnimationFrame(() => setVisible(true));
@@ -22,6 +22,7 @@ export default function HeroSection() {
 
   return (
     <section
+      ref={parallaxRef}
       className="hero"
       style={{ '--parallax-y': `${parallaxOffset}px` }}
     >
