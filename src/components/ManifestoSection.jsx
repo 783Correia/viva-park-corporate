@@ -49,7 +49,7 @@ export default function ManifestoSection() {
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white"
             style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '-0.02em' }}
           >
-            Sejam bem-vindos à evolução urbana
+            Seja bem-vindo à evolução urbana
           </h2>
         </div>
 
