@@ -3,6 +3,7 @@ import ArgumentoSection from './components/ArgumentoSection'
 import GaleriaSection from './components/GaleriaSection'
 import UnidadeSection from './components/UnidadeSection'
 import EcossistemaSection from './components/EcossistemaSection'
+import TimelineSection from './components/TimelineSection'
 import CondicoesSection from './components/CondicoesSection'
 import LocalizacaoSection from './components/LocalizacaoSection'
 import AssessorSection from './components/AssessorSection'
@@ -18,6 +19,7 @@ export default function App() {
       <GaleriaSection />
       <UnidadeSection />
       <EcossistemaSection />
+      <TimelineSection />
       <CondicoesSection />
       <LocalizacaoSection />
       <AssessorSection />

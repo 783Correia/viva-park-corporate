@@ -16,6 +16,7 @@ const pills = [
   'Open Shopping',
   'Centro Médico',
   'Universidade',
+  'Conviva',
 ];
 
 function StatCard({ end, suffix, label, delay, isVisible }) {
