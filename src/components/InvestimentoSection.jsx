@@ -20,7 +20,7 @@ function ValueBlock({ label, value, prefix, suffix, end, isVisible, delay, highl
         {label}
       </p>
       <p
-        className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold"
+        className="text-3xl md:text-4xl lg:text-5xl font-bold"
         style={{ color: highlight ? '#40916C' : '#fff' }}
       >
         {prefix}{value || count}{suffix}
@@ -64,8 +64,10 @@ export default function InvestimentoSection() {
 
         {/* Headline */}
         <h2
-          className="text-3xl md:text-4xl lg:text-5xl font-serif text-white text-center mb-6 transition-all duration-700 delay-100"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-6 transition-all duration-700 delay-100"
           style={{
+            fontFamily: "'Inter', sans-serif",
+            letterSpacing: '-0.02em',
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
@@ -123,7 +125,7 @@ export default function InvestimentoSection() {
           <p className="text-sm font-semibold tracking-wide uppercase mb-3" style={{ color: '#40916C' }}>
             Renda mensal estimada na entrega
           </p>
-          <p className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-2">
+          <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
             R$ 7.472<span className="text-xl md:text-2xl font-normal opacity-60">/mês</span>
           </p>
           <p className="text-sm" style={{ color: '#888' }}>

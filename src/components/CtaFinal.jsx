@@ -18,7 +18,7 @@ export default function CtaFinal() {
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/images/aerea-02.jpg)' }}
+        style={{ backgroundImage: 'url(/images/noturna-01.jpg)' }}
       />
 
       {/* Dark overlay */}
@@ -27,14 +27,14 @@ export default function CtaFinal() {
       {/* Content */}
       <div className="relative z-10 max-w-3xl mx-auto px-5 md:px-8 text-center py-20">
         <h2
-          className="font-serif text-3xl md:text-5xl lg:text-6xl text-white leading-tight mb-8 transition-all duration-700"
+          className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8 transition-all duration-700"
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
         >
-          Já imaginou seu escritório{' '}
-          <span className="text-[#52B788]">neste endereço?</span>
+          Seu escritório no endereço{' '}
+          <span className="text-[#52B788]">mais valorizado de SC</span>
         </h2>
 
         {/* Recap pills */}

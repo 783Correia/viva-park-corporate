@@ -41,14 +41,16 @@ export default function UnidadeSection() {
 
         {/* Headline */}
         <h2
-          className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-12 transition-all duration-700 delay-100"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-12 transition-all duration-700 delay-100"
           style={{
             color: "#1A1A1A",
+            fontFamily: "'Inter', sans-serif",
+            letterSpacing: "-0.02em",
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
         >
-          Sala 2313
+          Sala 2313 — Viva Park Corporate
         </h2>
 
         {/* Spec cards grid */}
@@ -67,7 +69,7 @@ export default function UnidadeSection() {
               }}
             >
               <p
-                className="font-serif text-xl md:text-2xl lg:text-3xl font-bold mb-1 transition-colors duration-300
+                className="text-xl md:text-2xl lg:text-3xl font-bold mb-1 transition-colors duration-300
                            group-hover:text-[#2D6A4F]"
                 style={{ color: "#2D6A4F" }}
               >

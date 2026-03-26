@@ -65,14 +65,16 @@ export default function TimelineSection() {
 
         {/* Headline */}
         <h2
-          className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4 transition-all duration-700 delay-100"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 transition-all duration-700 delay-100"
           style={{
             color: '#1A1A1A',
+            fontFamily: "'Inter', sans-serif",
+            letterSpacing: '-0.02em',
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
         >
-          Um bairro que não para de crescer
+          Um ecossistema que cresce a cada ano
         </h2>
 
         <p
@@ -83,7 +85,7 @@ export default function TimelineSection() {
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
         >
-          De 2023 a 2028, mais de 30 operações comerciais entregues e planejadas dentro do Viva Park.
+          Gastronomia, esporte, educação, saúde, varejo — mais de 30 operações entregues e planejadas no Viva Park entre 2023 e 2028. Cada nova operação aumenta o fluxo, a demanda e a valorização.
         </p>
 
         {/* Timeline */}
@@ -141,7 +143,7 @@ export default function TimelineSection() {
 
                 {/* Year */}
                 <h3
-                  className="text-xl font-bold font-serif mb-3"
+                  className="text-xl font-bold mb-3"
                   style={{
                     color: item.status === 'future' ? '#999' : '#1A1A1A',
                   }}
@@ -191,7 +193,7 @@ export default function TimelineSection() {
                 />
 
                 <h3
-                  className="text-lg font-bold font-serif mb-2"
+                  className="text-lg font-bold mb-2"
                   style={{
                     color: item.status === 'future' ? '#999' : '#1A1A1A',
                   }}

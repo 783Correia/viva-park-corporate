@@ -58,7 +58,7 @@ export default function AssessorSection() {
                 />
               ) : (
                 <div className="w-64 h-80 md:w-72 md:h-96 rounded-2xl shadow-lg flex items-center justify-center bg-gradient-to-br from-[#2D6A4F] to-[#064C37]">
-                  <span className="text-5xl font-serif font-bold text-white/90">
+                  <span className="text-5xl font-bold text-white/90">
                     DC
                   </span>
                 </div>
@@ -69,7 +69,7 @@ export default function AssessorSection() {
           {/* Info */}
           <div>
             <h3
-              className={`font-serif text-3xl md:text-4xl text-[#1A1A1A] mb-2 transition-all duration-700 delay-300 ${
+              className={`text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-2 transition-all duration-700 delay-300 ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-6'

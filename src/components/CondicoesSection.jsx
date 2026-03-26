@@ -65,9 +65,11 @@ export default function CondicoesSection() {
 
         {/* Headline */}
         <h2
-          className="text-3xl md:text-4xl lg:text-5xl font-serif mb-14 transition-all duration-700 delay-100"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-14 transition-all duration-700 delay-100"
           style={{
             color: '#1A1A1A',
+            fontFamily: "'Inter', sans-serif",
+            letterSpacing: '-0.02em',
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
@@ -101,7 +103,7 @@ export default function CondicoesSection() {
                   {cond.title}
                 </h3>
 
-                <p className="text-2xl md:text-3xl font-serif font-bold text-[#1A1A1A] mb-1">
+                <p className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-1">
                   {cond.value}
                 </p>
 
@@ -155,7 +157,7 @@ export default function CondicoesSection() {
               Valor total
             </p>
 
-            <p className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#2D6A4F]">
+            <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2D6A4F]">
               R$ 963.033,38
             </p>
           </div>

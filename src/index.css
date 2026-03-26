@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Playfair Display", serif;
-  --font-sans: "DM Sans", sans-serif;
-  --font-hero: "Sora", sans-serif;
+  --font-serif: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-hero: "Inter", sans-serif;
 
   --color-bg: #FAFAF8;
   --color-bg-alt: #F3F1ED;

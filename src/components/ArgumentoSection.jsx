@@ -144,7 +144,7 @@ export default function ArgumentoSection() {
         }
 
         .argumento__label-text {
-          font-family: 'Sora', sans-serif;
+          font-family: 'Inter', sans-serif;
           font-size: 0.8rem;
           font-weight: 600;
           letter-spacing: 0.12em;
@@ -153,10 +153,11 @@ export default function ArgumentoSection() {
         }
 
         .argumento__headline {
-          font-family: 'Playfair Display', Georgia, serif;
-          font-weight: 600;
+          font-family: 'Inter', sans-serif;
+          font-weight: 700;
           font-size: clamp(1.75rem, 4vw, 2.75rem);
           line-height: 1.2;
+          letter-spacing: -0.02em;
           color: #1A1A1A;
           max-width: 700px;
           margin: 0 auto;
@@ -237,7 +238,7 @@ export default function ArgumentoSection() {
         }
 
         .arg-card__title {
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Inter', sans-serif;
           font-weight: 700;
           font-size: 1.1rem;
           color: #1A1A1A;
@@ -246,7 +247,7 @@ export default function ArgumentoSection() {
         }
 
         .arg-card__desc {
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Inter', sans-serif;
           font-weight: 400;
           font-size: 0.95rem;
           line-height: 1.65;

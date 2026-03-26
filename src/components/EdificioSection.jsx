@@ -123,7 +123,7 @@ export default function EdificioSection() {
               muted
               loop
               playsInline
-              poster="/images/aerea-02.jpg"
+              poster="/images/diurna-01.jpg"
             />
             {/* Green corner accent */}
             <div
@@ -159,14 +159,16 @@ export default function EdificioSection() {
 
             {/* Headline */}
             <h2
-              className="text-3xl md:text-4xl font-serif mb-10 transition-all duration-700 delay-100"
+              className="text-3xl md:text-4xl font-bold mb-10 transition-all duration-700 delay-100"
               style={{
                 color: '#1A1A1A',
+                fontFamily: "'Inter', sans-serif",
+                letterSpacing: '-0.02em',
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
               }}
             >
-              Muito mais que um escritório
+              Infraestrutura corporativa de primeiro nível
             </h2>
 
             {/* Feature list */}
@@ -190,7 +192,7 @@ export default function EdificioSection() {
                   <div>
                     <h3
                       className="text-base font-semibold mb-1"
-                      style={{ color: '#1A1A1A', fontFamily: "'DM Sans', sans-serif" }}
+                      style={{ color: '#1A1A1A', fontFamily: "'Inter', sans-serif" }}
                     >
                       {feat.title}
                     </h3>

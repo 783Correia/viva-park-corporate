@@ -35,11 +35,11 @@ export default function LocalizacaoSection() {
 
         {/* ── Headline ── */}
         <h2
-          className={`font-serif text-3xl md:text-4xl lg:text-5xl text-[#1A1A1A] leading-tight max-w-2xl mb-5 transition-all duration-700 delay-100 ${
+          className={`text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A1A1A] leading-tight max-w-2xl mb-5 transition-all duration-700 delay-100 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          Perto de tudo, entre o mar e a BR&nbsp;101
+          Entre o mar e a BR&nbsp;101, conectado a tudo
         </h2>
 
         {/* ── Description ── */}
@@ -48,8 +48,10 @@ export default function LocalizacaoSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          A apenas 45 minutos da capital e com acesso fácil aos principais
-          aeroportos do Estado, Porto Belo é um lugar verdadeiramente único.
+
+          Porto Belo é o epicentro da valorização imobiliária de Santa Catarina. A 5 minutos
+          de Itapema, 15 de Balneário Camboriú e 45 da capital, com acesso direto à BR 101
+          e aos principais aeroportos do Estado.
         </p>
 
         {/* ── Mapa ── */}
@@ -131,7 +133,7 @@ export default function LocalizacaoSection() {
               }}
             />
           </div>
-          <p className="relative text-white font-serif text-xl md:text-2xl lg:text-3xl">
+          <p className="relative text-white font-bold text-xl md:text-2xl lg:text-3xl" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '-0.01em' }}>
             <span className="text-[#52B788] font-semibold">
               80 mil visitantes
             </span>{' '}

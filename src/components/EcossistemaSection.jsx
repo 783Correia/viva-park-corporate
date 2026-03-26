@@ -31,7 +31,7 @@ function StatCard({ end, suffix, label, delay, isVisible }) {
         transitionDelay: `${delay}ms`,
       }}
     >
-      <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-white group-hover:text-[#40916C] transition-colors duration-300 font-serif">
+      <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-white group-hover:text-[#40916C] transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif" }}>
         {count}
         {suffix && (
           <span className="text-2xl md:text-3xl ml-1 font-normal opacity-80">
@@ -61,7 +61,7 @@ export default function EcossistemaSection() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: 'url(/images/aerea-01.jpg)',
+          backgroundImage: 'url(/images/aerea-topo.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.04,
@@ -87,13 +87,15 @@ export default function EcossistemaSection() {
 
         {/* Headline */}
         <h2
-          className="text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-6 transition-all duration-700 delay-100"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 transition-all duration-700 delay-100"
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+            fontFamily: "'Inter', sans-serif",
+            letterSpacing: '-0.02em',
           }}
         >
-          Um ecossistema que nenhuma outra região oferece
+          Tudo o que uma cidade precisa, dentro do mesmo bairro
         </h2>
 
         {/* Description */}
@@ -101,11 +103,15 @@ export default function EcossistemaSection() {
           className="max-w-2xl text-base md:text-lg leading-relaxed mb-16 transition-all duration-700 delay-200"
           style={{
             color: '#999',
+            fontFamily: "'Inter', sans-serif",
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
         >
-          O Viva Park Porto Belo é o maior bairro-parque do Brasil — um ecossistema planejado pela Vokkan com escola, arena esportiva, gastronomia, centro médico, universidade e mais de 30 operações comerciais. A 5 minutos de Itapema e 15 de Balneário Camboriú, entre o mar e a BR 101.
+          O ecossistema Viva Park reúne educação, esporte, gastronomia, saúde, comércio e serviços
+          profissionais em um raio de caminhada. Com mais de 30 operações já em funcionamento e
+          3 expansões planejadas, quem está dentro acompanha a valorização na prática —
+          e quem tem um escritório aqui, atende uma demanda que só cresce.
         </p>
 
         {/* Stats row */}
