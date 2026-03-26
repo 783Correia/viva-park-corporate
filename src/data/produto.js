@@ -53,13 +53,11 @@ export const produto = {
     { src: "/images/podcast.jpg", caption: "Sala de podcast — 13º pavimento" },
     { src: "/images/sala-vip.jpg", caption: "Sala VIP — térreo" },
     { src: "/images/auditorio.jpg", caption: "Auditório — térreo" },
-    { src: "/images/sala-7032.jpg", caption: "Sala modelo — visão geral" },
-    { src: "/images/sala-7034.jpg", caption: "Sala modelo — estações de trabalho" },
-    { src: "/images/sala-3536.jpg", caption: "Sala modelo — mesa executiva" },
-    { src: "/images/sala-7048.jpg", caption: "Sala modelo — bancada" },
-    { src: "/images/sala-7054.jpg", caption: "Sala modelo — área de reunião" },
-    { src: "/images/sala-7058.jpg", caption: "Sala modelo — área social" },
-    { src: "/images/sala-7059.jpg", caption: "Sala modelo — recepção" },
+    { src: "/images/diurna-geral.jpg", caption: "Vista geral — fachada diurna" },
+    { src: "/images/noturna-02.jpg", caption: "Fachada noturna — vista 02" },
+    { src: "/images/lazer.jpg", caption: "Área de lazer externa" },
+    { src: "/images/garagem.jpg", caption: "Garagem" },
+    { src: "/images/aerea-topo.jpg", caption: "Vista aérea — topo do edifício" },
   ],
 }
 
