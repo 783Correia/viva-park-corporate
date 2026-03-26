@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-const WHATSAPP_URL =
-  'https://wa.me/5547992762266?text=Olá Dieison! Vi a Sala 2313 no Viva Park Corporate e gostaria de conversar.';
-
 const pills = ['41,56m²', 'Vista Parque', '23º andar', 'VP 2'];
 
 export default function HeroSection() {
@@ -69,15 +66,6 @@ export default function HeroSection() {
           ))}
         </ul>
 
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`hero__cta ${visible ? 'is-visible' : ''}`}
-          style={stagger(3)}
-        >
-          Falar com Corazza
-        </a>
       </div>
 
       {/* scroll indicator */}
@@ -240,31 +228,6 @@ export default function HeroSection() {
           color: rgba(255, 255, 255, 0.85);
         }
 
-        .hero__cta {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          font-family: 'DM Sans', sans-serif;
-          font-weight: 600;
-          font-size: 1rem;
-          letter-spacing: 0.02em;
-          color: #fff;
-          background: #2D6A4F;
-          border: none;
-          border-radius: 999px;
-          padding: 16px 44px;
-          cursor: pointer;
-          text-decoration: none;
-          margin-top: 8px;
-          transition: background 0.3s ease, transform 0.3s ease,
-                      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-          box-shadow: 0 4px 20px rgba(45, 106, 79, 0.3);
-        }
-
-        .hero__cta:hover {
-          background: #245a42;
-          transform: translateY(-2px);
-        }
 
         .hero__scroll {
           position: absolute;
