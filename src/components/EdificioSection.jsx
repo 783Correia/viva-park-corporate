@@ -84,7 +84,7 @@ const features = [
     ),
     title: 'Colégio Bom Jesus',
     desc: 'Uma das maiores escolas do sul do Brasil no térreo do edifício.',
-    image: '/images/hall-terreo.jpg',
+    image: '/images/noturna-01.jpg',
   },
   {
     icon: (
