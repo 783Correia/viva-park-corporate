@@ -2,6 +2,7 @@ import HeroSection from './components/HeroSection'
 import ManifestoSection from './components/ManifestoSection'
 import ArgumentoSection from './components/ArgumentoSection'
 import GaleriaSection from './components/GaleriaSection'
+import VideoSalaSection from './components/VideoSalaSection'
 import EdificioSection from './components/EdificioSection'
 import UnidadeSection from './components/UnidadeSection'
 import EcossistemaSection from './components/EcossistemaSection'
@@ -21,6 +22,7 @@ export default function App() {
       <ManifestoSection />
       <ArgumentoSection />
       <GaleriaSection />
+      <VideoSalaSection />
       <EdificioSection />
       <UnidadeSection />
       <EcossistemaSection />
