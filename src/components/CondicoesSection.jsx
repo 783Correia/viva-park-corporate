@@ -16,9 +16,9 @@ const conditions = [
     date: 'A partir de 05/04/2026',
   },
   {
-    title: 'Semestrais',
-    value: 'R$ 48.151,67',
-    installments: '6x',
+    title: 'Anuais',
+    value: 'R$ 96.303,34',
+    installments: '3x',
     date: 'A partir de 05/03/2027',
   },
   {

@@ -93,7 +93,7 @@ export default function EcossistemaSection() {
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
         >
-          Tudo dentro do bairro
+          Um ecossistema que nenhuma outra região oferece
         </h2>
 
         {/* Description */}
@@ -105,8 +105,7 @@ export default function EcossistemaSection() {
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
         >
-          O Viva Park Porto Belo é um bairro-parque completo com infraestrutura
-          que nenhuma outra região oferece.
+          O Viva Park Porto Belo é o maior bairro-parque do Brasil — um ecossistema planejado pela Vokkan com escola, arena esportiva, gastronomia, centro médico, universidade e mais de 30 operações comerciais. A 5 minutos de Itapema e 15 de Balneário Camboriú, entre o mar e a BR 101.
         </p>
 
         {/* Stats row */}

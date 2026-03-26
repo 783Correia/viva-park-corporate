@@ -17,7 +17,7 @@ export const produto = {
   condicoes: {
     ato: { valor: "R$ 144.454,79", parcelas: "1x", data: "01/03/2026" },
     mensais: { valor: "R$ 4.299,26", parcelas: "56x", data: "A partir de 05/04/2026" },
-    semestrais: { valor: "R$ 48.151,67", parcelas: "6x", data: "A partir de 05/03/2027" },
+    anuais: { valor: "R$ 96.303,34", parcelas: "3x", data: "A partir de 05/03/2027" },
     chaves: { valor: "R$ 288.910,01", parcelas: "1x", data: "30/11/2030" },
   },
 

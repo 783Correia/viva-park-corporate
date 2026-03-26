@@ -5,19 +5,6 @@ const ARGUMENTS = [
   {
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 4L4 14V36H16V24H24V36H36V14L20 4Z" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M14 18H18V22H14V18Z" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M22 18H26V22H22V18Z" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M8 14L20 6L32 14" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    ),
-    title: 'Ao lado do Colégio Bom Jesus',
-    description:
-      'Uma das maiores escolas do sul do Brasil, trazendo fluxo constante de famílias e profissionais ao bairro.',
-  },
-  {
-    icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="6" y="16" width="12" height="20" rx="1" stroke="#2D6A4F" strokeWidth="2"/>
         <rect x="22" y="10" width="12" height="26" rx="1" stroke="#2D6A4F" strokeWidth="2"/>
         <line x1="10" y1="22" x2="14" y2="22" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round"/>
@@ -28,9 +15,22 @@ const ARGUMENTS = [
         <line x1="4" y1="36" x2="36" y2="36" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round"/>
       </svg>
     ),
-    title: 'Região 100% residencial',
+    title: 'Único corporativo do bairro',
     description:
-      'Centenas de famílias de alto padrão sem nenhum escritório corporativo por perto. Demanda represada.',
+      'Centenas de famílias de alto padrão, 80 mil visitantes por mês e nenhum outro escritório corporativo. Demanda represada real por serviços profissionais.',
+  },
+  {
+    icon: (
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4L4 14V36H16V24H24V36H36V14L20 4Z" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M14 18H18V22H14V18Z" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M22 18H26V22H22V18Z" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M8 14L20 6L32 14" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+    title: 'Ao lado do Colégio Bom Jesus',
+    description:
+      'Uma das maiores escolas do sul do Brasil no térreo do edifício. Fluxo diário garantido de famílias, profissionais e prestadores de serviço.',
   },
   {
     icon: (
@@ -42,7 +42,22 @@ const ARGUMENTS = [
     ),
     title: 'Última unidade aérea',
     description:
-      'Sala 2313 — a última disponível com vista privilegiada para o parque e a praia.',
+      'Sala 2313, no 23º andar — a última disponível com vista privilegiada para o parque e o mar. Quando acabar, acabou.',
+  },
+  {
+    icon: (
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4L8 12V16H32V12L20 4Z" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <rect x="12" y="16" width="16" height="16" stroke="#2D6A4F" strokeWidth="2"/>
+        <path d="M16 22H24" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M16 27H24" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M4 32H36" stroke="#2D6A4F" strokeWidth="2" strokeLinecap="round"/>
+        <circle cx="20" cy="8" r="2" fill="#2D6A4F"/>
+      </svg>
+    ),
+    title: 'Heliponto + infraestrutura premium',
+    description:
+      'Lounges, sala de reunião, espaço de descompressão e sala de podcast. Heliponto no topo do edifício. Infraestrutura de primeiro mundo.',
   },
 ];
 
@@ -73,10 +88,10 @@ export default function ArgumentoSection() {
         <div className="argumento__header">
           <div className="argumento__label">
             <span className="argumento__label-line" />
-            <span className="argumento__label-text">Por que esta sala?</span>
+            <span className="argumento__label-text">Oportunidade</span>
           </div>
           <h2 className="argumento__headline">
-            O único empreendimento corporativo da região
+            Por que esta é a oportunidade mais inteligente da região
           </h2>
         </div>
 
@@ -143,7 +158,7 @@ export default function ArgumentoSection() {
           font-size: clamp(1.75rem, 4vw, 2.75rem);
           line-height: 1.2;
           color: #1A1A1A;
-          max-width: 640px;
+          max-width: 700px;
           margin: 0 auto;
           opacity: 0;
           transform: translateY(24px);
@@ -158,8 +173,8 @@ export default function ArgumentoSection() {
         /* ---- grid ---- */
         .argumento__grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 28px;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 24px;
         }
 
         @media (max-width: 1024px) {

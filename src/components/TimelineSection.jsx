@@ -28,7 +28,7 @@ const timeline = [
   },
   {
     year: '2028',
-    items: ['Varejo', 'Mix de Lojas', 'Gastronomia'],
+    items: ['Universidade', 'Varejo', 'Mix de Lojas', 'Gastronomia'],
     status: 'future',
   },
 ];
@@ -156,7 +156,8 @@ export default function TimelineSection() {
                       key={op}
                       className="text-sm leading-snug"
                       style={{
-                        color: item.status === 'future' ? '#aaa' : '#666',
+                        color: op === 'Universidade' ? '#2D6A4F' : (item.status === 'future' ? '#aaa' : '#666'),
+                        fontWeight: op === 'Universidade' ? '700' : '400',
                       }}
                     >
                       {op}
@@ -204,9 +205,10 @@ export default function TimelineSection() {
                       key={op}
                       className="text-xs px-2.5 py-1 rounded-full border"
                       style={{
-                        borderColor: item.status === 'future' ? '#ddd' : 'rgba(45,106,79,0.2)',
-                        color: item.status === 'future' ? '#aaa' : '#555',
-                        backgroundColor: item.status === 'future' ? '#f5f5f5' : 'rgba(45,106,79,0.06)',
+                        borderColor: op === 'Universidade' ? '#2D6A4F' : (item.status === 'future' ? '#ddd' : 'rgba(45,106,79,0.2)'),
+                        color: op === 'Universidade' ? '#fff' : (item.status === 'future' ? '#aaa' : '#555'),
+                        backgroundColor: op === 'Universidade' ? '#2D6A4F' : (item.status === 'future' ? '#f5f5f5' : 'rgba(45,106,79,0.06)'),
+                        fontWeight: op === 'Universidade' ? '700' : '400',
                       }}
                     >
                       {op}
