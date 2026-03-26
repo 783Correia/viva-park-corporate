@@ -162,13 +162,20 @@ export default function ArgumentoSection() {
           gap: 28px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
           .argumento__grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
           }
+        }
+
+        @media (max-width: 640px) {
+          .argumento__grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+          }
           .argumento {
-            padding: 72px 20px;
+            padding: 64px 20px;
           }
         }
 

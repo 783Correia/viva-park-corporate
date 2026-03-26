@@ -90,7 +90,7 @@ export default function TimelineSection() {
         <div className="relative">
           {/* Horizontal line (desktop) */}
           <div
-            className="hidden md:block absolute top-[28px] left-0 right-0 h-[2px] transition-all duration-1500 ease-out"
+            className="hidden lg:block absolute top-[28px] left-0 right-0 h-[2px]"
             style={{
               background: isVisible
                 ? 'linear-gradient(90deg, #2D6A4F 0%, #40916C 50%, #ddd 100%)'
@@ -107,7 +107,7 @@ export default function TimelineSection() {
           />
 
           {/* Desktop grid */}
-          <div className="hidden md:grid grid-cols-6 gap-4">
+          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 lg:gap-4">
             {timeline.map((item, i) => (
               <div
                 key={item.year}

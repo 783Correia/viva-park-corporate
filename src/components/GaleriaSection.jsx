@@ -108,11 +108,11 @@ export default function GaleriaSection() {
         <div className="flex items-center gap-3 mb-10">
           <span
             className="block w-8 h-[3px] rounded-full"
-            style={{ background: "#2E7D32" }}
+            style={{ background: "#2D6A4F" }}
           />
           <span
             className="text-sm font-semibold tracking-widest uppercase"
-            style={{ color: "#2E7D32" }}
+            style={{ color: "#2D6A4F" }}
           >
             A sua sala
           </span>
@@ -188,7 +188,7 @@ export default function GaleriaSection() {
             <div className="mt-2 h-[3px] w-full bg-black/10 rounded-full overflow-hidden">
               <div
                 className="h-full rounded-full transition-all duration-300"
-                style={{ width: `${progress}%`, background: "#2E7D32" }}
+                style={{ width: `${progress}%`, background: "#2D6A4F" }}
               />
             </div>
           </div>
@@ -196,7 +196,8 @@ export default function GaleriaSection() {
           {/* ── Thumbnails ── */}
           <div
             className="flex lg:flex-col gap-2 lg:w-[120px] shrink-0
-                        overflow-x-auto lg:overflow-x-visible lg:overflow-y-auto"
+                        overflow-x-auto lg:overflow-x-visible lg:overflow-y-auto
+                        scroll-strip pb-2 lg:pb-0"
           >
             {visibleThumbs.map((foto, i) => {
               const idx = thumbStart + i;
@@ -205,11 +206,11 @@ export default function GaleriaSection() {
                 <button
                   key={idx}
                   onClick={() => goTo(idx)}
-                  className={`relative flex-shrink-0 w-[100px] h-[68px] lg:w-full lg:h-[72px]
+                  className={`relative flex-shrink-0 w-[80px] h-[56px] md:w-[110px] md:h-[72px] lg:w-full lg:h-[72px]
                               rounded-lg overflow-hidden border-2 transition-all duration-200
                               ${
                                 isActive
-                                  ? "border-[#2E7D32] ring-2 ring-[#2E7D32]/30 scale-[1.03]"
+                                  ? "border-[#2D6A4F] ring-2 ring-[#2D6A4F]/30 scale-[1.03]"
                                   : "border-transparent opacity-60 hover:opacity-90"
                               }`}
                 >

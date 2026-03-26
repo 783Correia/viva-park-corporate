@@ -20,7 +20,7 @@ export default function AssessorSection() {
     <section
       ref={sectionRef}
       id="assessor"
-      className="relative py-20 md:py-28 overflow-hidden"
+      className="relative py-16 md:py-24 overflow-hidden"
       style={{ backgroundColor: '#FAFAF8' }}
     >
       <div className="max-w-6xl mx-auto px-5 md:px-8">
@@ -37,10 +37,10 @@ export default function AssessorSection() {
         </div>
 
         {/* ── Content Grid ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
           {/* Photo */}
           <div
-            className={`relative flex justify-center lg:justify-start transition-all duration-700 delay-200 ${
+            className={`relative flex justify-center md:justify-start transition-all duration-700 delay-200 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >

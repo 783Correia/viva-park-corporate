@@ -36,7 +36,7 @@ export default function CondicoesSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 md:py-32 lg:py-40"
+      className="py-16 md:py-24 lg:py-32"
       style={{ backgroundColor: '#FAFAF8' }}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
@@ -124,7 +124,7 @@ export default function CondicoesSection() {
         {/* Total value highlight card */}
         <div ref={totalRef} className="flex justify-center">
           <div
-            className="relative bg-white rounded-2xl border border-gray-200 px-10 py-10 md:px-16 md:py-12
+            className="relative bg-white rounded-2xl border border-gray-200 px-6 py-8 md:px-16 md:py-12
                        text-center max-w-xl w-full transition-all duration-700 overflow-hidden
                        hover:shadow-xl"
             style={{

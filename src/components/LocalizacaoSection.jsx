@@ -17,7 +17,7 @@ export default function LocalizacaoSection() {
     <section
       ref={sectionRef}
       id="localizacao"
-      className="relative py-20 md:py-28 overflow-hidden"
+      className="relative py-16 md:py-24 overflow-hidden"
       style={{ backgroundColor: '#F3F1ED' }}
     >
       <div className="max-w-6xl mx-auto px-5 md:px-8">

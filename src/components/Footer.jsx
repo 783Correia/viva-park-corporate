@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-4xl mx-auto px-5 md:px-8 text-center">
         {/* ── Animated green line ── */}
         <div className="flex justify-center mb-8">
-          <span className="block w-12 h-[2px] bg-[#0B6B4F] animate-line-grow origin-center" />
+          <span className="block w-12 h-[2px] bg-[#2D6A4F]" />
         </div>
 
         {/* ── Main info ── */}
