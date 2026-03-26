@@ -43,7 +43,7 @@ export const produto = {
     { src: "/images/sala-7032.jpg", caption: "Sala — visão geral" },
     { src: "/images/sala-7034.jpg", caption: "Estações de trabalho" },
     { src: "/images/sala-3536.jpg", caption: "Detalhe — mesa executiva" },
-    { src: "/images/sala-3553.jpg", caption: "Vista da janela" },
+    { src: "/images/sala-3553.jpg", caption: "Parede decorativa premium" },
     { src: "/images/sala-7048.jpg", caption: "Bancada lateral" },
     { src: "/images/sala-7046.jpg", caption: "Estação com armário" },
     { src: "/images/sala-3538.jpg", caption: "Detalhe — prateleira" },
