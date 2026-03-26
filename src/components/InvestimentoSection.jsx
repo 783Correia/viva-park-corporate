@@ -9,19 +9,21 @@ function ValueBlock({ label, value, prefix, suffix, end, isVisible, delay, highl
     <div
       className="text-center px-6 py-8 md:py-10 rounded-2xl transition-all duration-600"
       style={{
-        backgroundColor: highlight ? 'rgba(45,106,79,0.12)' : 'rgba(255,255,255,0.04)',
-        border: highlight ? '1px solid rgba(64,145,108,0.3)' : '1px solid rgba(255,255,255,0.06)',
+        backgroundColor: highlight ? 'rgba(255,255,255,0.18)' : 'rgba(255,255,255,0.10)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        border: highlight ? '1px solid rgba(255,255,255,0.35)' : '1px solid rgba(255,255,255,0.15)',
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
         transitionDelay: `${delay}ms`,
       }}
     >
-      <p className="text-sm font-semibold tracking-wide uppercase mb-3" style={{ color: '#999' }}>
+      <p className="text-sm font-semibold tracking-wide uppercase mb-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
         {label}
       </p>
       <p
         className="text-3xl md:text-4xl lg:text-5xl font-bold"
-        style={{ color: highlight ? '#40916C' : '#fff' }}
+        style={{ color: highlight ? '#A5D6A7' : '#fff' }}
       >
         {prefix}{value || count}{suffix}
       </p>
@@ -36,14 +38,20 @@ export default function InvestimentoSection() {
     <section
       ref={sectionRef}
       className="relative py-20 md:py-28 lg:py-36 overflow-hidden"
-      style={{ backgroundColor: '#111' }}
     >
-      {/* Subtle texture */}
+      {/* Background image */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0"
         style={{
-          backgroundImage: 'radial-gradient(circle at 30% 50%, rgba(45,106,79,0.06) 0%, transparent 60%)',
+          backgroundImage: 'url(/images/noturna-01.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
+      />
+      {/* Dark overlay for readability */}
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(0,0,0,0.72)' }}
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 lg:px-16">
@@ -55,11 +63,11 @@ export default function InvestimentoSection() {
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
         >
-          <span className="block w-8 h-[3px] rounded-full" style={{ background: '#40916C' }} />
-          <span className="text-sm font-semibold tracking-widest uppercase" style={{ color: '#40916C' }}>
+          <span className="block w-8 h-[3px] rounded-full" style={{ background: '#52B788' }} />
+          <span className="text-sm font-semibold tracking-widest uppercase" style={{ color: '#52B788' }}>
             Investimento
           </span>
-          <span className="block w-8 h-[3px] rounded-full" style={{ background: '#40916C' }} />
+          <span className="block w-8 h-[3px] rounded-full" style={{ background: '#52B788' }} />
         </div>
 
         {/* Headline */}
@@ -78,7 +86,7 @@ export default function InvestimentoSection() {
         <p
           className="max-w-2xl mx-auto text-center text-base md:text-lg leading-relaxed mb-14 transition-all duration-700 delay-200"
           style={{
-            color: '#999',
+            color: 'rgba(255,255,255,0.65)',
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
@@ -87,7 +95,7 @@ export default function InvestimentoSection() {
         </p>
 
         {/* 3 value blocks */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12">
           <ValueBlock
             label="Investiu"
             value="R$ 963 mil"
@@ -116,22 +124,24 @@ export default function InvestimentoSection() {
         <div
           className="text-center p-8 md:p-10 rounded-2xl transition-all duration-700 delay-500"
           style={{
-            background: 'linear-gradient(135deg, rgba(45,106,79,0.15) 0%, rgba(64,145,108,0.08) 100%)',
-            border: '1px solid rgba(64,145,108,0.25)',
+            background: 'rgba(255,255,255,0.12)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            border: '1px solid rgba(255,255,255,0.2)',
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(20px) scale(0.98)',
           }}
         >
-          <p className="text-sm font-semibold tracking-wide uppercase mb-3" style={{ color: '#40916C' }}>
+          <p className="text-sm font-semibold tracking-wide uppercase mb-3" style={{ color: '#52B788' }}>
             Renda mensal estimada na entrega
           </p>
           <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
             R$ 7.472<span className="text-xl md:text-2xl font-normal opacity-60">/mês</span>
           </p>
-          <p className="text-sm" style={{ color: '#888' }}>
+          <p className="text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
             Rendimento de 0,775% a.m. sobre o valor investido
           </p>
-          <p className="text-sm mt-1" style={{ color: '#666' }}>
+          <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.45)' }}>
             Projeção de 15% a.a. de valorização
           </p>
         </div>
