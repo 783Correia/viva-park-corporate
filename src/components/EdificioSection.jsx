@@ -108,7 +108,7 @@ export default function EdificioSection() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image side */}
+          {/* Video side */}
           <div
             className="relative rounded-2xl overflow-hidden transition-all duration-700"
             style={{
@@ -116,11 +116,14 @@ export default function EdificioSection() {
               transform: isVisible ? 'translateX(0)' : 'translateX(-30px)',
             }}
           >
-            <img
-              src="/images/aerea-02.jpg"
-              alt="Vista aérea do Viva Park Corporate"
+            <video
               className="w-full h-auto rounded-2xl"
-              loading="lazy"
+              src="/videos/fachada-lateral.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/images/aerea-02.jpg"
             />
             {/* Green corner accent */}
             <div
