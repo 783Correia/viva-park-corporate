@@ -80,7 +80,7 @@ export default function InvestimentoSection() {
             transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
           }}
         >
-          Alavancagem imobiliária na prática
+          Projeção de valorização e retorno
         </h2>
 
         <p
